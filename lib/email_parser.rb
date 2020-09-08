@@ -11,8 +11,11 @@ class EmailAddressParser
   end
 
   def parse
-    ADDRESSES <<@emails.split(", ")
-    ADDRESSES.uniq
+  emails = []
+  emails  << @emails.split(", ")
+  emails.each do{|x| x << ADDRESSES}
+  ADDRESSES.uniq
   end
 
 end
+ 
