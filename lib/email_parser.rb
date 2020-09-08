@@ -4,7 +4,7 @@
 # or whitespace (' ').
 class EmailAddressParser
   attr_accessor :email
-  @addresses = []
+  ADDRESSES = []
   def initialize(email)
     @emails = email
     self.parse
@@ -12,7 +12,7 @@ class EmailAddressParser
 
   def parse
     @emails.split(", ")
-    @addresses << @emails
+    ADDRESSES << @emails
     @addresses.uniq
   end
 
