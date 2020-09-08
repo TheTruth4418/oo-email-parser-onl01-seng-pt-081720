@@ -13,7 +13,7 @@ class EmailAddressParser
   def parse
     @emails.split(", ")
     ADDRESSES << @emails
-    @addresses.uniq
+    ADDRESSES.uniq
   end
 
 end
