@@ -11,8 +11,7 @@ class EmailAddressParser
   end
 
   def parse
-    @emails.split(",")
-    ADDRESSES << @emails
+    ADDRESSES <<@emails.split(",")
     ADDRESSES.uniq
   end
 
