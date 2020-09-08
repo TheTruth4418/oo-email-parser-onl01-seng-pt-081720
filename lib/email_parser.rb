@@ -7,11 +7,13 @@ class EmailAddressParser
   @addresses = []
   def initialize(email)
     @emails = emails
+    self.parse
   end
 
   def parse
     @emails.split(", ")
     @addresses << @email
+    @addresses.uniq
   end
 
 end
