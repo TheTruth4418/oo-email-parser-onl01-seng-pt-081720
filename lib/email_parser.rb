@@ -13,6 +13,7 @@ class EmailAddressParser
   def parse
   emails = []
   emails  << @emails.split(", ")
+  binding.pry
   emails.each {|x| x << ADDRESSES}
   ADDRESSES.uniq
   end
