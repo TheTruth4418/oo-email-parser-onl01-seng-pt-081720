@@ -18,7 +18,7 @@ class EmailAddressParser
   end
 
   ADDRESSES.flatten.uniq
-  binding.pry 
+  binding.pry
   end
 
 end
