@@ -14,7 +14,7 @@ class EmailAddressParser
   def parse
   emails = @emails.split(" ")
   emails.map do |x|
-    ADDRESSES << x.gsub(",","")  if x.include?(",")
+    x.include?(",") ? ADDRESSES << x.gsub(",","") : ADDRESSES << x
   end
 
   ADDRESSES.uniq
