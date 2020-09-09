@@ -16,7 +16,7 @@ class EmailAddressParser
   emails.each do |x|
   x.gsub(",","")  if x.include?(",")
   end
-    
+
   end
   emails.each {|x| ADDRESSES << x}
   ADDRESSES.uniq
