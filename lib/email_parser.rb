@@ -14,10 +14,9 @@ class EmailAddressParser
   def parse
   emails = @emails.split(" ")
   emails.each do |x|
-  x.gsub(",","")  if x.include?(",")
+    x.gsub(",","")  if x.include?(",")
   end
 
-  end
   emails.each {|x| ADDRESSES << x}
   ADDRESSES.uniq
   end
