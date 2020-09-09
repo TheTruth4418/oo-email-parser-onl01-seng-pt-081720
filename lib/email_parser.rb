@@ -16,7 +16,7 @@ class EmailAddressParser
     x.include?(",") ? @addresses << x.gsub(",","") : @addresses << x
   end
 
-  @addresses
+  @addresses.uniq
 
   end
 
