@@ -5,19 +5,18 @@
 require 'pry'
 class EmailAddressParser
   attr_accessor :email
-  ADDRESSES = []
+  @addresses = []
   def initialize(email)
     @emails = email
-
   end
 
   def parse
   emails = @emails.split(" ")
   emails.map do |x|
-    x.include?(",") ? ADDRESSES << x.gsub(",","") : ADDRESSES << x
+    x.include?(",") ? @addresses << x.gsub(",","") : @addresses << x
   end
 
-  ADDRESSES
+  @addresses
 
   end
 
